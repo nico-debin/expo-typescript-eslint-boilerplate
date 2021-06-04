@@ -15,6 +15,9 @@
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
+  "env": {
+    "jest": true
+  },
   "rules": {
     "import/no-unresolved": 0,
     "react/jsx-filename-extension": [1, {
@@ -33,9 +36,11 @@
       }
     ],
     "no-use-before-define": "off",
-    "@typescript-eslint/no-use-before-define": ["error"],
+    "@typescript-eslint/no-use-before-define": ["error", {"functions": false, "classes": false, "variables": false}],
     "import/extensions": ["error", "never"],
     "react/prop-types": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/no-unescaped-entities": "off",
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": ["error"]
   }
